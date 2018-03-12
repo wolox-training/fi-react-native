@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
 
 import AppLayout from './layout';
 
 class App extends Component {
   state = {
-    todos: [{
-      id: new Date().getTime(),
-      text: 'asdasdads',
-      checked: false 
-    }],
+    todos: [],
     input: ''
   }
 
