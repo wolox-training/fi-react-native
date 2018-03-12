@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import { StackNavigator, TabNavigator } from 'react-navigation';
 
-import App from './src/Screens/App';
+import Navigator from './navigation';
 
 class Main extends Component {
   render() {
-    return <App />;
-      }
-    
+    return <Navigator />;
   }
+}
 
-  export default Main;
+export default Main;
