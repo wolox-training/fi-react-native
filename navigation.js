@@ -4,7 +4,6 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import App from './src/Screens/App';
 import Books from './src/Screens/Books';
-import Header from './src/Components/Header';
 
 const navigationRoutes = {
   TodoList: () => ({title: 'Todo List'}),
