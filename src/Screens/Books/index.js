@@ -1,6 +1,37 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, ScrollView, ActivityIndicator } from 'react-native';
 
-const Books = () => <View></View>;
+import BooksArray from '../../../config/constants';
+
+import Book from './Components/Book';
+import styles from './styles';
+
+class Books  extends Component {
+  state = {
+    loading: true,
+    books: []
+  }
+  componentDidMount () {
+    this.setState({books: BooksArray});
+    setTimeout(() => {
+      this.setState({loading: false})}, 3000);
+  }
+
+  render() {
+    if(this.state.loading) {
+      return (
+        <View style={styles.loaderContainer}>
+          <ActivityIndicator size="large" color="skyblue" />
+        </View>
+      );
+    }
+    return (
+      <ScrollView>
+        {this.state.books.map(book => <Book key={book.id} book={book}/>)}
+      </ScrollView>
+    )
+  }
+
+}
 
 export default Books;
