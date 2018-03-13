@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
+
+import BookImage from '../../../../Components/BookImage';
 
 import styles from './styles';
 
@@ -13,11 +15,7 @@ class Book extends React.Component {
     const { book } = this.props;
     return (
       <TouchableOpacity style={styles.container} onPress={this.navigation}>
-        {book.image_url ? (
-          <Image source={{ uri: book.image_url }} style={styles.image} />
-        ) : (
-          <View style={styles.nullImage} />
-        )}
+        <BookImage url={book.image_url} />
         <View style={styles.textContainer}>
           <Text style={styles.title}>{book.title}</Text>
           <Text style={styles.author}>{book.author}</Text>

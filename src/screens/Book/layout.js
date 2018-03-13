@@ -1,17 +1,15 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
+
+import BookImage from '../../Components/BookImage';
 
 import styles from './styles';
 
 const BookLayout = ({ book }) => (
   <View style={styles.container}>
     <View style={styles.bookHeader}>
-      {book.image_url ? (
-        <Image source={{ uri: book.image_url }} style={styles.image} />
-      ) : (
-        <View style={styles.nullImage} />
-      )}
+      <BookImage url={book.image_url} />
       <View>
         <Text style={styles.title}>{book.title}</Text>
         <Text style={styles.subtitle}>{book.author}</Text>
