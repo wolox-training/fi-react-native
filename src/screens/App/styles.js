@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   input: {
     height: 50,
     paddingVertical: 5,
-    borderWidth: 0,
+    borderWidth: 0
   },
   removeButton: {
     padding: 10,

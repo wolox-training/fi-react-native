@@ -1,13 +1,7 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
 
-import App from './src/Screens/App';
+import App from './src/screens/App';
 
-class Main extends Component {
-  render() {
-    return <App />;
-      }
-    
-  }
+const Main = () => <App />;
 
-  export default Main;
+export default Main;
