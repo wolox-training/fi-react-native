@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import Navigator from './navigation';
 
-class Main extends Component {
-  render() {
-    return <Navigator />;
-  }
-}
+const Main = () => <Navigator />;
 
 export default Main;
