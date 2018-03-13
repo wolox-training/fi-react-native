@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, ScrollView, ActivityIndicator } from 'react-native';
 
 import BooksArray from '../../../config/constants';
+import * as colors from '../../constants/colors';
 
 import Book from './Components/Book';
 import styles from './styles';
@@ -21,7 +22,7 @@ class Books extends Component {
     if (this.state.loading) {
       return (
         <View style={styles.loaderContainer}>
-          <ActivityIndicator size="large" color="skyblue" />
+          <ActivityIndicator size="large" color={colors.lightBlue} />
         </View>
       );
     }
