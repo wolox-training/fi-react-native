@@ -15,9 +15,6 @@ const AppLayout = ({
   inputValue
 }) => (
   <View style={styles.container}>
-    <View style={styles.header}>
-      <Text style={styles.headerText}>Todo List</Text>
-    </View>
     <TextInput
       style={styles.input}
       placeholder="Enter an item!"
