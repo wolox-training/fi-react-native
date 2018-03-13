@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import TodoLayout from './layout';
+import Todo from './layout';
 
-const Todo = ({ todo, check, deleteTodo }) => (
-  <TodoLayout todo={todo} check={check} deleteTodo={deleteTodo} />
+const TodoContainer = ({ todo, onCheck, onDelete }) => (
+  <Todo todo={todo} check={onCheck} deleteTodo={onDelete} />
 );
 
-Todo.propTypes = {
+TodoContainer.propTypes = {
   todo: PropTypes.shape({
     id: PropTypes.number,
     text: PropTypes.string,
     checked: PropTypes.bool
   }),
-  check: PropTypes.func,
-  deleteTodo: PropTypes.func
+  onCheck: PropTypes.func,
+  onDelete: PropTypes.func
 };
-export default Todo;
+
+export default TodoContainer;

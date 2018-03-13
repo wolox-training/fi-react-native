@@ -28,7 +28,7 @@ const AppLayout = ({
     />
     <ScrollView style={styles.bodyContainer}>
       {todos.map(todo => (
-        <Todo key={todo.text} todo={todo} check={handleTodoCheck} deleteTodo={deleteTodo} />
+        <Todo key={todo.text} todo={todo} onCheck={handleTodoCheck} onDelete={deleteTodo} />
       ))}
     </ScrollView>
     <TouchableOpacity style={styles.removeButton} onPress={removeTodos}>

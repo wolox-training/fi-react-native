@@ -1,5 +1,10 @@
 import { StyleSheet } from 'react-native';
 
+import * as colors from '../../../../constants/colors';
+
+const checkboxSize = 20;
+const crossSize = 15;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -14,26 +19,26 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   checkbox: {
-    borderColor: '#000',
+    borderColor: colors.black,
     borderWidth: 2,
     borderRadius: 5,
-    height: 20,
-    width: 20,
+    height: checkboxSize,
+    width: checkboxSize,
     marginRight: 10
   },
   checked: {
-    backgroundColor: '#000'
+    backgroundColor: colors.black
   },
   selected: {
-    backgroundColor: '#999'
+    backgroundColor: colors.gray
   },
   todoRight: {
     flexDirection: 'row',
     alignItems: 'center'
   },
   crossImage: {
-    width: 15,
-    height: 15
+    width: crossSize,
+    height: crossSize
   }
 });
 

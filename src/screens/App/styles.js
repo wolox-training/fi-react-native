@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import * as colors from '../../constants/colors';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -8,12 +10,12 @@ const styles = StyleSheet.create({
   header: {
     height: 50,
     marginBottom: 10,
-    backgroundColor: 'skyblue',
+    backgroundColor: colors.lightBlue,
     justifyContent: 'center',
     alignItems: 'center'
   },
   headerText: {
-    color: 'white',
+    color: colors.white,
     fontWeight: 'bold'
   },
   input: {
@@ -26,12 +28,12 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   removeText: {
-    color: 'red'
+    color: colors.red
   },
   bodyContainer: {
     flex: 1,
-    borderBottomColor: '#DDD',
-    borderTopColor: '#DDD',
+    borderBottomColor: colors.gray,
+    borderTopColor: colors.gray,
     borderTopWidth: 1,
     borderBottomWidth: 1
   }
