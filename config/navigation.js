@@ -2,6 +2,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import App from '../src/screens/App';
 import Books from '../src/screens/Books';
+import Book from '../src/screens/Book';
 
 import { tabNavigationStyle, stackNavigationStyle } from './navigationLayout';
 
@@ -20,7 +21,8 @@ const Routes = TabNavigator(
 
 const Navigator = StackNavigator(
   {
-    FirstHome: { screen: Routes }
+    Home: { screen: Routes },
+    Book: { screen: Book }
   },
   stackNavigationStyle
 );

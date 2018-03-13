@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, ScrollView, ActivityIndicator } from 'react-native';
 
 import BooksArray from '../../../config/constants';
@@ -12,6 +13,7 @@ class Books extends Component {
     loading: true,
     books: []
   };
+
   componentDidMount() {
     setTimeout(() => {
       this.setState({ loading: false, books: BooksArray });
@@ -26,8 +28,20 @@ class Books extends Component {
         </View>
       );
     }
-    return <ScrollView>{this.state.books.map(book => <Book key={book.id} book={book} />)}</ScrollView>;
+    return (
+      <ScrollView>
+        {this.state.books.map(book => (
+          <Book key={book.id} book={book} navigate={this.props.navigation.navigate} />
+        ))}
+      </ScrollView>
+    );
   }
 }
+
+Books.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func
+  })
+};
 
 export default Books;
