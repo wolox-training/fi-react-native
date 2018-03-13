@@ -1,7 +1,7 @@
 import React from 'react';
 
-import App from './src/screens/App';
+import Navigator from './config/navigation';
 
-const Main = () => <App />;
+const Main = () => <Navigator />;
 
 export default Main;
